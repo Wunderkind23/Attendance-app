@@ -20,7 +20,7 @@ class App {
     this.corsOpts = { origin: '*' };
 
     this.securityMiddleware(this.app);
-    // this.standardMiddleware(this.app);
+    this.standardMiddleware(this.app);
 
     let signals = ['SIGTERM', 'SIGINT', 'SIGUSR1', 'SIGUSR2'];
 
@@ -38,12 +38,12 @@ class App {
     app.use(cors(this.corsOpts));
   }
 
-  // private standardMiddleware(app: Application) {
-  //   app.use(express.json());
-  //   app.use(express.urlencoded({ extended: false }));
-  //   app.use(routes);
-  //   app.use(systemMiddleware.errorHandler);
-  // }
+  private standardMiddleware(app: Application) {
+    app.use(express.json());
+    app.use(express.urlencoded({ extended: false }));
+    app.use(routes);
+    app.use(systemMiddleware.errorHandler);
+  }
 
   // private async connectDB() {
   //   await db.connectDatabase();

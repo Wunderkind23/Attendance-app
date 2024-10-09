@@ -12,7 +12,7 @@ class Routes {
   private routes() {
     this.router.get('/', (req: Request, res: Response) => {
       res.status(200).json({
-        message: 'Welcome to Auth Service',
+        message: 'Attendance App',
       });
     });
 
