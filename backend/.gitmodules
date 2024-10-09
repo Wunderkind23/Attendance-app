@@ -1,0 +1,4 @@
+[submodule "proto"]
+	path = proto
+	url = https://github.com/SnapnetDev/hcmatrixV3.0-proto.git
+	branch = develop
